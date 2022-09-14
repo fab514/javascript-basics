@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <script src="./fromtoday.js"></script>
-    <form id="form">
+    <form id="myForm" onSubmit="return validateForm()" method="post">
         <label>Insert date
-            <input type="date" name="date" id="date" value="2022-12-25" onclick="alert('click event occurred')">
+            <input type="date" name="date" id="date" display="none" onsubmit="validateForm()" />
+            <input type="submit" value="Find Date" />
         </label>
-        <button id="button">Find Date</button>
     </form>
 </body>
+<script src="./fromtoday.js"></script>
 
 </html>
