@@ -1,4 +1,4 @@
-// TODO: onSubmit the page should not refresh. Successfully breakup the function
+// TODO: onSubmit the page should not refresh. Update had a hard time with getting preventDefault to work. Will look into it more tomorrow. 
 function validateForm() {
     const form = document.getElementById('myForm');
     let validateDate = document.forms["myForm"]["date"].value;
@@ -26,7 +26,7 @@ function validateForm() {
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     const yayChristmas = document.createElement('div');
-    const chirstmasText = document.createTextNode(`Yay! There are ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds until this Christmas`);
+    const chirstmasText = document.createTextNode(`There are ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds between today and the day you chose.`);
     yayChristmas.appendChild(chirstmasText);
     
     document.body.appendChild(yayChristmas);
